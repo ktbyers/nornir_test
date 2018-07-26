@@ -1,0 +1,10 @@
+---
+pynet-rtr1:
+    nornir_host: cisco1.twb-tech.com
+    groups: 
+      - cisco-ios
+
+pynet-rtr2:
+    nornir_host: cisco2.twb-tech.com
+    groups: 
+      - cisco-ios

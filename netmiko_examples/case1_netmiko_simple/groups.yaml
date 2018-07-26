@@ -1,0 +1,9 @@
+---
+test123: {}
+
+cisco-ios:
+  nornir_nos: ios
+  # nornir_username: admin
+  # nornir_password: <password>
+  groups:
+    - test123
