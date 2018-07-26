@@ -2,6 +2,7 @@ from nornir.core import InitNornir
 from nornir.plugins.tasks.networking import napalm_get
 
 from pprint import pprint
+from nornir_test.nornir_utilities import nornir_set_creds
 
 # Turn off self-signed cert warnings
 import requests
@@ -23,6 +24,7 @@ def std_print(agg_result):
 
 def main():
     brg = InitNornir(config_file="./nornir.yml")
+    nornir_set_creds(brg)
     result = brg.run(
         task=napalm_get,
         getters=["facts"],
