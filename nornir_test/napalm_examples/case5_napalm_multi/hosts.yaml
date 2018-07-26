@@ -1,0 +1,20 @@
+---
+ios1:
+    nornir_host: cisco1.twb-tech.com
+    groups: 
+      - ios
+
+ios2:
+    nornir_host: cisco2.twb-tech.com
+    groups: 
+      - ios
+
+nxos1:
+    nornir_host: nxos1.twb-tech.com
+    groups: 
+      - nxos
+
+nxos2:
+    nornir_host: nxos2.twb-tech.com
+    groups: 
+      - nxos
