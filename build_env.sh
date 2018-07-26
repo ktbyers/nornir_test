@@ -5,3 +5,7 @@ source ~/VENV/nornir_test/bin/activate
 
 # Needs to be on the right branch
 cd ~/nornir
+pip install -e .
+
+cd ~/nornir_test
+pip install -r ./requirements.txt
