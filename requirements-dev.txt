@@ -1,0 +1,10 @@
+decorator
+pytest
+pytest-cov
+pylama
+flake8-import-order
+requests-mock
+tox
+black==18.6b4
+mypy
+-r requirements.txt
