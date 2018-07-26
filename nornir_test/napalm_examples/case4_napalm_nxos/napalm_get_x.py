@@ -2,24 +2,12 @@ from nornir.core import InitNornir
 from nornir.plugins.tasks.networking import napalm_get
 
 from pprint import pprint
-from nornir_test.nornir_utilities import nornir_set_creds
+from nornir_test.nornir_utilities import nornir_set_creds, std_print
 
 # Turn off self-signed cert warnings
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-
-
-def std_print(agg_result):
-    print()
-    for k, multi_result in agg_result.items():
-        print('-' * 50)
-        print(k)
-        for result_obj in multi_result:
-            pprint(result_obj.result)
-        print('-' * 50)
-        print()
-    print()
 
 
 def main():

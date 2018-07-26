@@ -1,0 +1,10 @@
+---
+nxos1:
+    nornir_host: nxos1.twb-tech.com
+    groups: 
+      - nxos
+
+nxos2:
+    nornir_host: nxos2.twb-tech.com
+    groups: 
+      - nxos
