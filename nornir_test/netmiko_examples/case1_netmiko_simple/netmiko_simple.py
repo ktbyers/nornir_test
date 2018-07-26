@@ -1,22 +1,8 @@
-from getpass import getpass
-
 from nornir.core import InitNornir
 from nornir.plugins.tasks.networking import netmiko_send_command
 from nornir.plugins.functions.text import print_result
 
-
-def nornir_set_creds(brg, username=None, password=None):
-    """Handler so credentials don't need stored in clear in inventory."""
-    if not username:
-        username = input("Enter username: ")
-    if not password:
-        password = getpass()
-
-    for host_obj in brg.inventory.hosts.values():
-        # host_obj.username = username
-        # host_obj.password = password
-        host_obj.data["nornir_username"] = username
-        host_obj.data["nornir_password"] = password
+from nornir_test.nornir_utilities import nornir_set_creds
 
 
 def main():
