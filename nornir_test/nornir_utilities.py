@@ -22,7 +22,10 @@ def std_print(agg_result):
         print('-' * 50)
         print(k)
         for result_obj in multi_result:
-            pprint(result_obj.result)
+            if isinstance(result_obj.result, str):
+                print(result_obj.result)
+            else:
+                pprint(result_obj.result)
         print('-' * 50)
         print()
     print()
