@@ -6,4 +6,4 @@ defaults: {}
 nxos:
   nornir_nos: nxos
   nornir_network_api_port: 8443
-  # nornir_ssh_port: 65004
+  # nornir_ssh_port: 22

@@ -11,3 +11,10 @@ ios:
 nxos:
   nornir_nos: nxos
   nornir_network_api_port: 8443
+
+eos:
+  nornir_nos: eos
+  nornir_network_api_port: 443
+
+junos:
+  nornir_nos: junos
