@@ -8,18 +8,3 @@ pynet-rtr2:
     hostname: cisco2.twb-tech.com
     groups: 
       - cisco-ios
-
-
-# my_host:
-#     # default standard attributes
-#     username: blah
-#     password: bleh
-#     port: 123
-#     netmiko_options:
-#               # overriden standard attributes
-#               hostname: overriden_hostname
-#               port: 321
-#               connection_options:
-#                      # whatever the plugin wants to implement
-#                      ssh_config_file:   ~/.ssh/config
-#                      other: bleh

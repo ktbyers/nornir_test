@@ -4,6 +4,19 @@ defaults: {}
   # nornir_password: <password>
 
 nxos:
-  nornir_nos: nxos
-  nornir_network_api_port: 8443
-  # nornir_ssh_port: 22
+  port: 8443
+  napalm_options:
+      platform: nxos
+      connection_options:
+        timeout: 300
+        optional_args:
+          port: 8443
+
+nxos_ssh:
+  port: 443
+  napalm_options:
+      platform: nxos_ssh
+      connection_options:
+        timeout: 300
+        optional_args:
+          port: 22

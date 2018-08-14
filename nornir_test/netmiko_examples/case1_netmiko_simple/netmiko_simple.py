@@ -13,7 +13,7 @@ def main():
 
     result = brg.run(
         netmiko_send_command,
-        num_workers=60,
+        num_workers=1,
         command_string="show ip int brief",
         use_textfsm=True,
     )
