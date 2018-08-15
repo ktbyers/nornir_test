@@ -12,8 +12,8 @@ def nornir_set_creds(brg, username=None, password=None):
     for host_obj in brg.inventory.hosts.values():
         # host_obj.username = username
         # host_obj.password = password
-        host_obj.data["nornir_username"] = username
-        host_obj.data["nornir_password"] = password
+        host_obj.data["username"] = username
+        host_obj.data["password"] = password
 
 
 def std_print(agg_result):

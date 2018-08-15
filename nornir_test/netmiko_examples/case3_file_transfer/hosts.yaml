@@ -1,0 +1,10 @@
+---
+pynet-rtr1:
+    hostname: cisco1.twb-tech.com
+    groups: 
+      - cisco-ios
+
+pynet-rtr2:
+    hostname: cisco2.twb-tech.com
+    groups: 
+      - cisco-ios
