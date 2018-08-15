@@ -15,10 +15,7 @@ def main():
     brg = InitNornir(config_file="./nornir.yml")
 
     f = F(groups__contains="ios")
-    import pdb
-    pdb.set_trace()
     napalm_hosts = brg.filter(f)
-    # nornir_set_creds(napalm_hosts)
 
     result = napalm_hosts.run(
         task=napalm_get,

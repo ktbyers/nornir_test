@@ -1,35 +1,35 @@
 ---
 ios1:
-    nornir_host: cisco1.twb-tech.com
+    hostname: cisco1.twb-tech.com
     groups: 
       - ios
 
 ios2:
-    nornir_host: cisco2.twb-tech.com
+    hostname: cisco2.twb-tech.com
     groups: 
       - ios
 
 nxos1:
-    nornir_host: nxos1.twb-tech.com
+    hostname: nxos1.twb-tech.com
     groups: 
       - nxos
 
 nxos2:
-    nornir_host: nxos2.twb-tech.com
+    hostname: nxos2.twb-tech.com
     groups: 
       - nxos
 
 arista1:
-    nornir_host: arista1.twb-tech.com
+    hostname: arista1.twb-tech.com
     groups: 
       - eos
 
 arista2:
-    nornir_host: arista2.twb-tech.com
+    hostname: arista2.twb-tech.com
     groups: 
       - eos
 
 srx1:
-    nornir_host: srx1.twb-tech.com
+    hostname: srx1.twb-tech.com
     groups: 
       - junos
