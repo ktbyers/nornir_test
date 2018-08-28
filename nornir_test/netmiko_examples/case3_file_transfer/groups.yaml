@@ -1,9 +1,16 @@
 ---
-test123: {}
+defaults: {}
+  # username: admin
+  # password: <password>
 
 cisco-ios:
   platform: cisco_ios
-  # username: admin
-  # password: <password>
-  groups:
-    - test123
+  img: test_cisco_ios.txt
+
+arista:
+  platform: arista_eos
+  img: test_arista.txt
+
+nxos:
+  platform: cisco_nxos
+  img: test_nxos.txt
