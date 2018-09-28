@@ -10,9 +10,9 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 def main():
-    with InitNornir(config_file="./nornir.yml") as brg:
-        # nornir_set_creds(brg)
-        result = brg.run(
+    with InitNornir(config_file="./nornir.yml") as norn:
+        nornir_set_creds(norn)
+        result = norn.run(
             task=napalm_get,
             num_workers=1,
             getters=["facts"],
