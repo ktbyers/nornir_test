@@ -1,6 +1,7 @@
-from nornir.core import InitNornir
+from nornir import InitNornir
 from nornir.plugins.tasks.networking import netmiko_send_command
 from nornir.plugins.functions.text import print_result
+from nornir_test.nornir_utilities import nornir_set_creds
 
 
 def netmiko_test(task):
@@ -14,8 +15,9 @@ def netmiko_test(task):
 
 
 def main():
-    brg = InitNornir(config_file="./nornir.yml")
-    result = brg.run(
+    norn = InitNornir(config_file="./nornir.yml")
+    nornir_set_creds(norn)
+    result = norn.run(
         netmiko_test,
     )
     print_result(result)
