@@ -1,4 +1,4 @@
-from nornir.core import InitNornir
+from nornir import InitNornir
 from nornir.plugins.tasks.networking import napalm_get
 
 from nornir_test.nornir_utilities import nornir_set_creds, std_print
