@@ -1,4 +1,4 @@
-from nornir.core import InitNornir
+from nornir import InitNornir
 from nornir.plugins.tasks.networking import netmiko_file_transfer
 
 from nornir_test.nornir_utilities import nornir_set_creds, std_print
@@ -17,11 +17,10 @@ def os_upgrade(task):
 def main():
 
     # Initialize Nornir object using hosts.yaml and groups.yaml
-    brg = InitNornir(config_file="nornir.yml")
-    nornir_set_creds(brg)
-    test_file = 'test_file9.txt'
+    norn = InitNornir(config_file="nornir.yml")
+    nornir_set_creds(norn)
 
-    result = brg.run(
+    result = norn.run(
         task=os_upgrade,
         num_workers=20,
     )

@@ -1,4 +1,4 @@
-from nornir.core import InitNornir
+from nornir import InitNornir
 from nornir.plugins.tasks.networking import napalm_get
 
 from nornir_test.nornir_utilities import nornir_set_creds, std_print
@@ -10,10 +10,10 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 def main():
-    brg = InitNornir(config_file="./nornir.yml")
-    nornir_set_creds(brg)
+    norn = InitNornir(config_file="./nornir.yml")
+    nornir_set_creds(norn)
 
-    result = brg.run(
+    result = norn.run(
         task=napalm_get,
         getters=["facts"],
     )

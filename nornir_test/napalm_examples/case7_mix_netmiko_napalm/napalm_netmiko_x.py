@@ -1,4 +1,4 @@
-from nornir.core import InitNornir
+from nornir import InitNornir
 from nornir.plugins.tasks.networking import napalm_get
 from nornir.plugins.tasks.networking import netmiko_send_command
 from nornir.core.filter import F
@@ -12,10 +12,10 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 def main():
-    brg = InitNornir(config_file="./nornir.yml")
+    norn = InitNornir(config_file="./nornir.yml")
 
     f = F(groups__contains="ios")
-    napalm_hosts = brg.filter(f)
+    napalm_hosts = norn.filter(f)
 
     result = napalm_hosts.run(
         task=napalm_get,
@@ -24,7 +24,7 @@ def main():
 
     std_print(result)
 
-    netmiko_hosts = brg.filter(F(groups__contains="asa"))
+    netmiko_hosts = norn.filter(F(groups__contains="asa"))
     result = netmiko_hosts.run(
         netmiko_send_command,
         num_workers=60,
