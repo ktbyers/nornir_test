@@ -24,11 +24,11 @@ def main():
 
     std_print(result)
 
-    netmiko_hosts = norn.filter(F(groups__contains="asa"))
+    netmiko_hosts = norn.filter(F(groups__contains="nxos"))
     result = netmiko_hosts.run(
         netmiko_send_command,
         num_workers=60,
-        command_string="show ip arp",
+        command_string="show lldp neighbors",
         use_textfsm=True,
     )
 
