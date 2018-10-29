@@ -17,9 +17,9 @@ def get_and_close(task):
 
 
 def main():
-    brg = InitNornir(config_file="./nornir.yml")
-    nornir_set_creds(brg)
-    result = brg.run(task=get_and_close, num_workers=20)
+    norn = InitNornir(config_file="./nornir.yml")
+    nornir_set_creds(norn)
+    result = norn.run(task=get_and_close, num_workers=20)
     std_print(result)
 
 
