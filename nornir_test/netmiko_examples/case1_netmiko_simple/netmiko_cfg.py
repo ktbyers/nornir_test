@@ -12,9 +12,7 @@ def main():
     nornir_set_creds(brg)
 
     result = brg.run(
-        netmiko_send_config,
-        num_workers=60,
-        config_commands=['logging buffered 20000']
+        netmiko_send_config, num_workers=60, config_commands=["logging buffered 20000"]
     )
 
     print_result(result)

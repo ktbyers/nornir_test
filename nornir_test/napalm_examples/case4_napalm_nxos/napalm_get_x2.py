@@ -6,14 +6,12 @@ from nornir_test.nornir_utilities import nornir_set_creds, std_print
 # Turn off self-signed cert warnings
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 def get_and_close(task):
-    result = task.run(
-        task=napalm_get,
-        getters=["facts"],
-    )
+    result = task.run(task=napalm_get, getters=["facts"])
     task.host.close_connection("napalm")
     return result
 
@@ -21,10 +19,7 @@ def get_and_close(task):
 def main():
     brg = InitNornir(config_file="./nornir.yml")
     nornir_set_creds(brg)
-    result = brg.run(
-        task=get_and_close,
-        num_workers=20,
-    )
+    result = brg.run(task=get_and_close, num_workers=20)
     std_print(result)
 
 

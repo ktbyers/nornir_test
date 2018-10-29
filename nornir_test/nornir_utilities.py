@@ -17,13 +17,13 @@ def nornir_set_creds(norn, username=None, password=None):
 def std_print(agg_result):
     print()
     for k, multi_result in agg_result.items():
-        print('-' * 50)
+        print("-" * 50)
         print(k)
         for result_obj in multi_result:
             if isinstance(result_obj.result, str):
                 print(result_obj.result)
             else:
                 pprint(result_obj.result)
-        print('-' * 50)
+        print("-" * 50)
         print()
     print()
