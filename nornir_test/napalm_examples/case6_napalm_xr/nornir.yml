@@ -1,3 +1,4 @@
 ---
-# Don't log by default
-logging_file: ""
+logging:
+  # Don't log by default
+  file: ""

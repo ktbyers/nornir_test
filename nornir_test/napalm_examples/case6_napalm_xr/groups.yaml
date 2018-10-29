@@ -1,7 +1,3 @@
 ---
-defaults:
-  username: admin1
-  # password: <password>
-
 iosxr:
   platform: "ios-xr"
