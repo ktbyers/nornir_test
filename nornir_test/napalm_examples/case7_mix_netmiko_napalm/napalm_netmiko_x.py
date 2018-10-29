@@ -8,6 +8,7 @@ from nornir_test.nornir_utilities import nornir_set_creds, std_print
 # Turn off self-signed cert warnings
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
@@ -17,10 +18,7 @@ def main():
     f = F(groups__contains="ios")
     napalm_hosts = norn.filter(f)
 
-    result = napalm_hosts.run(
-        task=napalm_get,
-        getters=["facts"],
-    )
+    result = napalm_hosts.run(task=napalm_get, getters=["facts"])
 
     std_print(result)
 
