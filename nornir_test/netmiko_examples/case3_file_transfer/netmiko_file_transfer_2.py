@@ -3,13 +3,14 @@ from nornir.plugins.tasks.networking import netmiko_file_transfer
 
 from nornir_test.nornir_utilities import nornir_set_creds, std_print
 
+
 def os_upgrade(task):
-    file_name = task.host.get('img')
+    file_name = task.host.get("img")
     result = task.run(
         task=netmiko_file_transfer,
         source_file=file_name,
         dest_file=file_name,
-        direction='put',
+        direction="put",
     )
     return result
 
@@ -20,10 +21,7 @@ def main():
     norn = InitNornir(config_file="nornir.yml")
     nornir_set_creds(norn)
 
-    result = norn.run(
-        task=os_upgrade,
-        num_workers=20,
-    )
+    result = norn.run(task=os_upgrade, num_workers=20)
     std_print(result)
 
 
