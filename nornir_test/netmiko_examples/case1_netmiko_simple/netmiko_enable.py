@@ -5,7 +5,7 @@ from nornir_test.nornir_utilities import nornir_set_creds
 
 
 def netmiko_test(task):
-    net_connect = task.host.get_connection("netmiko")
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
     net_connect.enable()
     task.run(netmiko_send_command, command_string="show ip int brief", use_textfsm=True)
 
@@ -13,7 +13,7 @@ def netmiko_test(task):
 def main():
     norn = InitNornir(config_file="./nornir.yml")
     nornir_set_creds(norn)
-    result = norn.run(netmiko_test)
+    result = norn.run(netmiko_test, num_workers=1)
     print_result(result)
 
 
