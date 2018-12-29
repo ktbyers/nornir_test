@@ -13,7 +13,7 @@ def netmiko_test(task):
 def main():
     norn = InitNornir(config_file="./nornir.yml")
     nornir_set_creds(norn)
-    result = norn.run(netmiko_test, num_workers=1)
+    result = norn.run(netmiko_test, num_workers=20)
     print_result(result)
 
 
