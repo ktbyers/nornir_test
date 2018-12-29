@@ -3,6 +3,11 @@ ios:
   platform: ios
   # Not required as it would default to this (just for testing)
   port: 22
+  connection_options:
+    napalm:
+      extras:
+        optional_args:
+          global_delay_factor: 2
 
 nxos:
   platform: nxos
