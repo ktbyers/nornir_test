@@ -1,0 +1,39 @@
+---
+ios:
+  platform: ios
+  # Not required as it would default to this (just for testing)
+  port: 22
+  connection_options:
+    napalm:
+      extras:
+        optional_args:
+          global_delay_factor: 2
+
+nxos:
+  platform: nxos
+  port: 8443
+  connection_options:
+    netmiko:
+      port: 22
+      extras:
+        device_type: cisco_nxos
+
+nxos_ssh:
+  connection_options:
+    napalm:
+      platform: nxos_ssh
+    netmiko:
+      platform: cisco_nxos
+
+eos:
+  platform: eos
+  port: 443
+
+junos:
+  platform: junos
+
+asa:
+  connection_options:
+    netmiko:
+      extras:
+        device_type: cisco_asa

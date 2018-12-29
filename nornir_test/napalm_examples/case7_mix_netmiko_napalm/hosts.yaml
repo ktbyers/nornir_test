@@ -17,7 +17,7 @@ nxos1:
 nxos2:
     hostname: nxos2.twb-tech.com
     groups: 
-      - nxos
+      - nxos_ssh
 
 arista1:
     hostname: arista1.twb-tech.com

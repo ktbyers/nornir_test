@@ -2,8 +2,8 @@
 test123: {}
 
 cisco-ios:
-  nornir_nos: ios
-  # nornir_username: admin
-  # nornir_password: <password>
+  platform: cisco_ios
+  # username: admin
+  # password: <password>
   groups:
     - test123

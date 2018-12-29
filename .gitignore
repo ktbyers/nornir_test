@@ -104,5 +104,4 @@ venv.bak/
 .mypy_cache/
 
 
-nornir_test/napalm_examples/case7_mix_netmiko_napalm/groups.yaml
-nornir_test/napalm_examples/case7_mix_netmiko_napalm/hosts.yaml
+nornir_test/napalm_examples/case7_mix_netmiko_napalm/defaults.yaml

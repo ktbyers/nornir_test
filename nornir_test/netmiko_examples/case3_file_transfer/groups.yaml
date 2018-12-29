@@ -1,0 +1,15 @@
+---
+cisco-ios:
+  platform: cisco_ios
+  data:
+    img: test_cisco_ios.txt
+
+arista:
+  platform: arista_eos
+  data:
+    img: test_arista.txt
+
+nxos:
+  platform: cisco_nxos
+  data:
+    img: test_nxos.txt

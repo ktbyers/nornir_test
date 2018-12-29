@@ -10,10 +10,16 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
+def get_and_close(task):
+    result = task.run(task=napalm_get, getters=["facts"])
+    task.host.close_connection("napalm")
+    return result
+
+
 def main():
-    with InitNornir(config_file="./nornir.yml") as norn:
-        nornir_set_creds(norn)
-        result = norn.run(task=napalm_get, num_workers=1, getters=["facts"])
+    norn = InitNornir(config_file="./nornir.yml")
+    nornir_set_creds(norn)
+    result = norn.run(task=get_and_close, num_workers=20)
     std_print(result)
 
 

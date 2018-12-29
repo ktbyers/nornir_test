@@ -1,20 +1,16 @@
 ---
-defaults: {}
-  # nornir_username: admin
-  # nornir_password: <password>
-
 ios:
-  nornir_nos: ios
+  platform: ios
   # Not required as it would default to this (just for testing)
-  nornir_ssh_port: 22
+  port: 22
 
 nxos:
-  nornir_nos: nxos
-  nornir_network_api_port: 8443
+  platform: nxos
+  port: 8443
 
 eos:
-  nornir_nos: eos
-  nornir_network_api_port: 443
+  platform: eos
+  port: 443
 
 junos:
-  nornir_nos: junos
+  platform: junos

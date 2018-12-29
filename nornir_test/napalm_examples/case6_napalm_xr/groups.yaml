@@ -1,7 +1,3 @@
 ---
-defaults:
-  nornir_username: admin1
-  # nornir_password: <password>
-
 iosxr:
-  nornir_nos: "ios-xr"
+  platform: "ios-xr"

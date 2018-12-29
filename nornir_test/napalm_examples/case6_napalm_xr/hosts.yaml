@@ -1,5 +1,5 @@
 ---
 ios_xr1:
-    nornir_host: 184.105.247.77
+    hostname: 184.105.247.77
     groups: 
       - iosxr
