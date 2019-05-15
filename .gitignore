@@ -103,5 +103,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# Mac stuff
+.DS_Store
+*/.DS_Store
 
 nornir_test/napalm_examples/case7_mix_netmiko_napalm/defaults.yaml
